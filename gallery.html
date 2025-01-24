@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about Perfectionist Crew Ltd - North London's trusted property maintenance experts with over 15 years of experience.">
-  <title>About Us | Perfectionist Crew Ltd</title>
+  <meta name="description" content="View our portfolio of completed property maintenance projects including bathrooms, painting, flooring, and general maintenance work.">
+  <title>Our Projects | Perfectionist Crew Ltd</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/gallery.css">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -31,64 +32,71 @@
     </nav>
   </header>
 
-  <main class="about-page">
-    <section class="about-hero">
+  <main>
+    <section class="gallery-hero">
       <div class="container">
-        <h1>About Perfectionist Crew Ltd</h1>
-        <p>Excellence in Property Maintenance Since 2010</p>
+        <h1>Our Projects</h1>
+        <p>Discover Our Finest Work</p>
       </div>
     </section>
 
-    <section class="company-history">
+    <section class="gallery-filters">
       <div class="container">
-        <h2>Our Story</h2>
-        <p>Founded in North London over 15 years ago, Perfectionist Crew Ltd began with a simple mission: to provide precise, reliable, and high-quality property maintenance services to our local community. What started as a small family business has grown into one of North London's most trusted property maintenance companies, serving countless satisfied customers and completing hundreds of successful projects.</p>
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="bathroom">Bathrooms</button>
+        <button class="filter-btn" data-filter="painting">Painting</button>
+        <button class="filter-btn" data-filter="flooring">Flooring</button>
+        <button class="filter-btn" data-filter="general">General</button>
       </div>
     </section>
 
-    <section class="mission-vision">
-      <div class="container">
-        <h2>Mission & Vision</h2>
-        <div class="mission-content">
-          <div class="mission-item">
-            <h3>Our Mission</h3>
-            <p>To deliver exceptional property maintenance services that exceed client expectations through precision, professionalism, and unwavering attention to detail. We are committed to maintaining the highest standards of quality in every project we undertake.</p>
+    <section class="container">
+      <div class="gallery-grid">
+        <!-- Bathroom Projects -->
+        <div class="gallery-item" data-category="bathroom">
+          <img src="images/bathroom1.jpg" alt="Modern Bathroom Renovation">
+          <div class="gallery-overlay">
+            <h3>Modern Bathroom Renovation</h3>
+            <p>Complete bathroom remodel with custom tiling</p>
           </div>
-          <div class="mission-item">
-            <h3>Our Vision</h3>
-            <p>To be the most trusted and respected property maintenance company in North London, known for our commitment to quality, innovation, and customer satisfaction. We aim to set new standards in the industry through our dedication to excellence.</p>
+        </div>
+
+        <!-- Painting Projects -->
+        <div class="gallery-item" data-category="painting">
+          <img src="images/painting1.jpg" alt="Interior Painting Project">
+          <div class="gallery-overlay">
+            <h3>Living Room Transformation</h3>
+            <p>Professional interior painting service</p>
+          </div>
+        </div>
+
+        <!-- Flooring Projects -->
+        <div class="gallery-item" data-category="flooring">
+          <img src="images/flooring1.jpg" alt="Laminate Flooring Installation">
+          <div class="gallery-overlay">
+            <h3>Premium Flooring Installation</h3>
+            <p>High-quality laminate flooring project</p>
+          </div>
+        </div>
+
+        <!-- General Projects -->
+        <div class="gallery-item" data-category="general">
+          <img src="images/general1.jpg" alt="General Maintenance Work">
+          <div class="gallery-overlay">
+            <h3>Property Maintenance</h3>
+            <p>General repairs and improvements</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="why-choose-us">
-      <div class="container">
-        <h2>Why Choose Us</h2>
-        <div class="benefits-grid">
-          <div class="benefit-card">
-            <i class="fas fa-certificate"></i>
-            <h3>Certified Professionals</h3>
-            <p>Our team consists of fully certified and experienced professionals who are experts in their respective fields.</p>
-          </div>
-          <div class="benefit-card">
-            <i class="fas fa-medal"></i>
-            <h3>Quality Materials</h3>
-            <p>We use only the highest quality materials from trusted suppliers to ensure lasting results.</p>
-          </div>
-          <div class="benefit-card">
-            <i class="fas fa-shield-alt"></i>
-            <h3>5-Year Guarantee</h3>
-            <p>All our work comes with a comprehensive 5-year guarantee for your peace of mind.</p>
-          </div>
-          <div class="benefit-card">
-            <i class="fas fa-clock"></i>
-            <h3>Timely Completion</h3>
-            <p>We pride ourselves on completing all projects on time and within the agreed budget.</p>
-          </div>
-        </div>
+    <!-- Image Modal -->
+    <div class="modal">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <img src="" alt="Project Detail">
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="footer">
@@ -126,5 +134,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
 </body>
 </html>
